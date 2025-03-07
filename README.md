@@ -25,22 +25,5 @@ Hello! I am Antonio Castro, an IT Educator and Lead IT Technician. I am dedicate
 ## My Portfolio
 
 *Projects*
-- [] SQL:
-  1. Write SQL queries to extract specific data
-  2. Create a small relational database
-  3. Design and implemenet a database schema
- 
-- [] Scripting (Powershell):
-  1. Write a Powershell script: List all files in a specific folder and backs them up to another directory. (Include a timestamp in the backup file names)
-  2. Write a Powershell script: Checks the system's disk space and sends an email alert if space falls below a specified threshold.
-  3. Write a Powershell script: That automates the setup of a new user account in Active Directory (Including user creation, group membership assignment, and permissions configuration.
- 
-- [] System Imaging:
-  1. Create a system image: Using a free tool like Clonezilla and document the process for creating a backup image of an operating system. Include steps for restoring the system from the image.
-  2. Create a bootable system image: That includes Windows and a set of essential software. Document the steps involved in the imaging process and the methods for restoring it to a new machine.
-  3. Set up a PXE (Preboot Execution Environment): Server to deploy system images across multiple machines. Write a step by step guide on how to configure PXE booting, upload system images, and deploy to machines on a network.
- 
-- [] R Programming:
-  1. Write an R script: That loads a CSV dataset and performs basic data cleaning (Handling missing values, converting data types)
-  2. Create an R data visualizationg: Using ggplot2 to analyze a dataset (Visualizing trends, comparing categories, or analyzing correlations)
-  3. Develop a predictive model: Using R. (Using a dataset to create a regression model and evaluate its accuracy. Document the steps for cleaning the data, choosing a modle, and evaluating performance.)
+- [CyberSecurity]
+  1. [Wireshark](Analyze FTP Credentials with Wireshark.md)
