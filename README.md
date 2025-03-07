@@ -17,10 +17,13 @@ Hello! I am Antonio Castro, an IT Educator and Lead IT Technician. I am dedicate
 1. Developed standard operating procedures for imaging laptops and desktops, saving over one hour per imaging process and improving efficiency for student workers.
 2. Trained five student workers in system management and security software.
 
-## Technical Skills
+## Technical Skills | Certifications
 
-- [] In Construction
+### CompTIA Certifications
+[✅] ITF+ [✅] A+ [✅] Network+ [✅] Security+ [In Progress] CySA+  
 
+### Skills
+Hardware | Software | Networking | Security | Operational Procedures | Network Design | Network Installation and Configuration | Network Management | Network Security | Network Troubleshooting | Security Concepts | Threats and Vulnerabilities | Access Control and Identity Management | Cryptography | Risk Management | Incident Response 
 <!--Section 2: List 3-4 key projects-->
 ## My Portfolio
 
