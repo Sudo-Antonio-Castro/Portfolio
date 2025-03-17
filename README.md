@@ -24,7 +24,9 @@ Hello! I am Antonio Castro, an IT Educator and Lead IT Technician. I am dedicate
 
 ### Degrees
 **Grossmont College** [_A.S._]Computer Science [_A.A._]Political Science **2020**  
+
 **CSU San Marcos** [_B.A._]Political Science w/minor in Management Information Systems **2022**  
+
 **Point Loma Nazarene University** [_B.A._] Computer Information Technology **2023**
 
 ### Skills
