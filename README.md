@@ -22,6 +22,11 @@ Hello! I am Antonio Castro, an IT Educator and Lead IT Technician. I am dedicate
 ### CompTIA Certifications
 [✅] ITF+ [✅] A+ [✅] Network+ [✅] Security+ [In Progress] CySA+  
 
+### Degrees
+**Grossmont College** [_A.S._]Computer Science [_A.A._]Political Science **2020**  
+**CSU San Marcos** [_B.A._]Political Science w/minor in Management Information Systems **2022**  
+**Point Loma Nazarene University** [_B.A._] Computer Information Technology **2023**
+
 ### Skills
 Hardware | Software | Networking | Security | Operational Procedures | Network Design | Network Installation and Configuration | Network Management | Network Security | Network Troubleshooting | Security Concepts | Threats and Vulnerabilities | Access Control and Identity Management | Cryptography | Risk Management | Incident Response 
 <!--Section 2: List 3-4 key projects-->
