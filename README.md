@@ -37,4 +37,3 @@ Hardware | Software | Networking | Security | Operational Procedures | Network D
 *Projects*
 - [CyberSecurity](https://github.com/Sudo-Antonio-Castro/CyberSecurity/tree/main)
 - [R Programming](https://github.com/Sudo-Antonio-Castro/R/tree/main)
-- [CompTIA A+ 1201 Labs](https://github.com/Sudo-Antonio-Castro/CompTIA-1201-Home-Labs/tree/main)
