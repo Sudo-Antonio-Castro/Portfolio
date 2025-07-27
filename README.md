@@ -23,7 +23,7 @@ Currently supporting city-wide IT operations and cloud infrastructure for munici
 
 ##  Technical Skills & Certifications
 
-###  Certifications  
+### CompTIA Certifications  
 - ✅ ITF+  
 - ✅ A+  
 - ✅ Network+  
@@ -47,7 +47,7 @@ Currently supporting city-wide IT operations and cloud infrastructure for munici
 
 ---
 
-## 💼 My Projects
+##  My Projects
 
 Explore hands-on labs, scripts, and security implementations:
 
