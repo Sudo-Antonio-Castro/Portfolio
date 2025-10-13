@@ -1,6 +1,6 @@
 ##  About Me
 
-Hi! I'm **Antonio Castro**, an IT Educator and Lead Technician with a passion for empowering communities through technology. My mission is to make tech approachable, effective, and transformative—whether supporting students, nonprofit initiatives, or municipal services.
+Hi! I'm **Antonio Castro**, an IT Educator and IT Helpdesk Technician with a passion for empowering communities through technology. My mission is to make tech approachable, effective, and transformative—whether supporting students, nonprofit initiatives, or municipal services.
 
 ---
 
