@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me | Antonio Castro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Antonio Castro — IT Educator and IT Helpdesk Technician specializing in community-focused technology, cloud, and cybersecurity."
+    />
+    <style>
+      :root {
+        --bg: #020617;
+        --bg-elevated: #020617;
+        --bg-card: #020617;
+        --bg-accent-soft: rgba(129, 140, 248, 0.12);
+        --accent: #818cf8;
+        --accent-strong: #6366f1;
+        --accent-2: #f97316;
+        --text: #e5e7eb;
+        --text-strong: #f9fafb;
+        --text-muted: #9ca3af;
+        --border-subtle: rgba(148, 163, 184, 0.3);
+        --radius-lg: 18px;
+        --shadow-soft: 0 20px 45px rgba(15, 23, 42, 0.85);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, #1d265c, transparent 55%),
+          radial-gradient(circle at top right, #0f766e, transparent 55%),
+          radial-gradient(circle at bottom, #111827, #020617 65%);
+        display: flex;
+        justify-content: center;
+        padding: 2.5rem 1.5rem 3.5rem;
+      }
+
+      .shell {
+        width: 100%;
+        max-width: 980px;
+        background: radial-gradient(circle at top left, #111827, #020617 55%);
+        border-radius: 28px;
+        border: 1px solid var(--border-subtle);
+        box-shadow: var(--shadow-soft);
+        padding: 2.25rem 1.75rem 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .shell::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.17;
+        background: radial-gradient(
+          circle at top right,
+          rgba(129, 140, 248, 0.55),
+          transparent 55%
+        );
+        pointer-events: none;
+      }
+
+      @media (min-width: 880px) {
+        .shell {
+          padding: 2.75rem 2.5rem 2.8rem;
+        }
+      }
+
+      header {
+        position: relative;
+        display: flex;
+        gap: 1.75rem;
+        align-items: center;
+        margin-bottom: 2.4rem;
+        z-index: 1;
+        flex-wrap: wrap;
+      }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 999px;
+        object-fit: cover;
+        border: 2px solid rgba(148, 163, 184, 0.6);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+        background: #020617;
+      }
+
+      @media (min-width: 720px) {
+        .avatar {
+          width: 110px;
+          height: 110px;
+        }
+      }
+
+      .headline {
+        flex: 1;
+        min-width: 220px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.22rem 0.65rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        color: var(--text-muted);
+        margin-bottom: 0.45rem;
+      }
+
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent-strong), #22c55e);
+      }
+
+      h1 {
+        font-size: 1.9rem;
+        line-height: 1.15;
+        color: var(--text-strong);
+        margin-bottom: 0.35rem;
+      }
+
+      @media (min-width: 640px) {
+        h1 {
+          font-size: 2.1rem;
+        }
+      }
+
+      .title-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        align-items: baseline;
+      }
+
+      .title-role {
+        font-size: 1rem;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      .title-location {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      .summary {
+        margin-top: 0.45rem;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        max-width: 540px;
+      }
+
+      .pill-row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.85rem;
+      }
+
+      .pill {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        color: var(--text-muted);
+        background: rgba(15, 23, 42, 0.9);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 1.75rem;
+      }
+
+      @media (min-width: 920px) {
+        main {
+          grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr);
+          column-gap: 1.75rem;
+        }
+      }
+
+      .section {
+        background: linear-gradient(
+          140deg,
+          rgba(15, 23, 42, 0.97),
+          rgba(15, 23, 42, 0.9)
+        );
+        border-radius: 20px;
+        padding: 1.4rem 1.35rem 1.5rem;
+        border: 1px solid rgba(31, 41, 55, 0.95);
+      }
+
+      .section + .section {
+        margin-top: 0.5rem;
+      }
+
+      @media (min-width: 920px) {
+        .section {
+          padding: 1.5rem 1.4rem 1.55rem;
+        }
+      }
+
+      .section-header {
+        margin-bottom: 0.75rem;
+      }
+
+      .section-eyebrow {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--accent);
+        margin-bottom: 0.15rem;
+      }
+
+      .section h2 {
+        font-size: 1.1rem;
+        color: var(--text-strong);
+        margin-bottom: 0.1rem;
+      }
+
+      .section-body p {
+        font-size: 0.93rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+
+      .split-columns {
+        display: grid;
+        gap: 1.15rem;
+      }
+
+      @media (min-width: 720px) {
+        .split-columns {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .card {
+        border-radius: 16px;
+        padding: 0.95rem 1rem 1rem;
+        background: radial-gradient(
+            circle at top left,
+            rgba(148, 163, 184, 0.16),
+            transparent 55%
+          ),
+          rgba(15, 23, 42, 0.92);
+        border: 1px solid rgba(55, 65, 81, 0.9);
+      }
+
+      .card h3 {
+        font-size: 0.98rem;
+        color: var(--text-strong);
+        margin-bottom: 0.15rem;
+      }
+
+      .card-context {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        color: var(--accent-2);
+        margin-bottom: 0.55rem;
+      }
+
+      .card ul {
+        list-style: disc;
+        padding-left: 1.1rem;
+      }
+
+      .card li {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: 0.25rem;
+      }
+
+      .skills-grid {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .skills-group-title {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        margin-bottom: 0.35rem;
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      .chip {
+        font-size: 0.78rem;
+        padding: 0.22rem 0.55rem;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(75, 85, 99, 0.9);
+        color: var(--text-muted);
+      }
+
+      .chip.chip-strong {
+        border-color: rgba(129, 140, 248, 0.9);
+        color: #e0e7ff;
+        background: radial-gradient(
+          circle at top left,
+          rgba(129, 140, 248, 0.45),
+          rgba(15, 23, 42, 0.95)
+        );
+      }
+
+      .timeline {
+        display: grid;
+        gap: 0.9rem;
+        border-left: 1px dashed rgba(75, 85, 99, 0.9);
+        padding-left: 0.9rem;
+        margin-top: 0.35rem;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 0.2rem;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: -1.25rem;
+        top: 0.25rem;
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent-strong), #22c55e);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+      }
+
+      .timeline-title {
+        font-size: 0.95rem;
+        color: var(--text-strong);
+      }
+
+      .timeline-caption {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-muted);
+        margin-top: 0.12rem;
+      }
+
+      .timeline-body {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        margin-top: 0.2rem;
+      }
+
+      .projects-grid {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .project {
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        background: rgba(15, 23, 42, 0.92);
+        border: 1px solid rgba(55, 65, 81, 0.95);
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .project-name-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.6rem;
+        align-items: baseline;
+      }
+
+      .project h3 {
+        font-size: 0.96rem;
+        color: var(--text-strong);
+      }
+
+      .project-tag {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        padding: 0.12rem 0.45rem;
+        border-radius: 999px;
+        border: 1px solid rgba(129, 140, 248, 0.7);
+        color: #e0e7ff;
+        background: rgba(15, 23, 42, 0.9);
+      }
+
+      .project p {
+        font-size: 0.86rem;
+        color: var(--text-muted);
+      }
+
+      .project a {
+        font-size: 0.82rem;
+        color: var(--accent);
+        text-decoration: none;
+        margin-top: 0.25rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.2rem;
+      }
+
+      .project a:hover {
+        text-decoration: underline;
+      }
+
+      .project a span {
+        font-size: 0.9em;
+      }
+
+      .certs-list,
+      .degree-list {
+        list-style: none;
+        display: grid;
+        gap: 0.38rem;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+      }
+
+      .cert-flag {
+        font-size: 0.88rem;
+      }
+
+      .cert-flag span {
+        margin-right: 0.25rem;
+      }
+
+      .footer-note {
+        margin-top: 1.6rem;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        text-align: right;
+      }
+
+      .footer-note a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .footer-note a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 1.75rem 1rem 2.5rem;
+        }
+
+        .shell {
+          border-radius: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React + ReactDOM from CDN, no build tools needed -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <!-- Babel lets us write JSX directly in this file -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function Pill({ children }) {
+        return <span className="pill">{children}</span>;
+      }
+
+      function Section({ id, title, eyebrow, children }) {
+        return (
+          <section id={id} className="section">
+            <div className="section-header">
+              {eyebrow && <p className="section-eyebrow">{eyebrow}</p>}
+              <h2>{title}</h2>
+            </div>
+            <div className="section-body">{children}</div>
+          </section>
+        );
+      }
+
+      function ExperienceCard({ title, context, bullets }) {
+        return (
+          <article className="card">
+            <h3>{title}</h3>
+            {context && <p className="card-context">{context}</p>}
+            <ul>
+              {bullets.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        );
+      }
+
+      const projects = [
+        {
+          name: "CyberSecurity Labs",
+          tag: "Security | Hands-on",
+          description:
+            "A collection of security-focused labs and configurations exploring threats, defenses, and incident response.",
+          url: "https://github.com/Sudo-Antonio-Castro/CyberSecurity-Labs",
+        },
+        {
+          name: "R Programming",
+          tag: "Data | Scripting",
+          description:
+            "R scripts and projects for analytics, automation, and data storytelling.",
+          url: "https://github.com/Sudo-Antonio-Castro/R-Programming",
+        },
+        {
+          name: "A+ 1201 Home Labs",
+          tag: "CompTIA A+",
+          description:
+            "Home lab setups designed to solidify CompTIA A+ 1101/1102 concepts using practical, low-cost scenarios.",
+          url: "https://sudo-antonio-castro.github.io/A-1201-Home-Labs",
+        },
+      ];
+
+      const experiences = [
+        {
+          title: "Local Government",
+          context: "IT Helpdesk & Cloud Support",
+          bullets: [
+            "Support city-wide IT operations and cloud infrastructure for municipal departments.",
+            "Deploy and manage Azure, Intune, Entra ID, Exchange Online, and Microsoft 365 Admin Center.",
+            "Help ensure reliable, secure digital services for residents and staff.",
+          ],
+        },
+        {
+          title: "Non-Profit",
+          context: "IT Educator & Coach",
+          bullets: [
+            "Design tailored study plans and certification roadmaps for ADA students.",
+            "Restructure CompTIA A+ curriculum into focused 1101/1102 modules.",
+            "Mentor learners to build confidence with hands-on labs and real-world scenarios.",
+          ],
+        },
+        {
+          title: "Higher Education",
+          context: "Campus IT & Student Mentor",
+          bullets: [
+            "Author SOPs for imaging campus devices, improving turnaround by over an hour per session.",
+            "Mentor student workers on system administration and endpoint security tools.",
+            "Help bridge academic theory with operational IT practices.",
+          ],
+        },
+      ];
+
+      const skills = {
+        domains: [
+          "Hardware & Software Troubleshooting",
+          "Network Architecture & Security",
+          "Endpoint Management",
+          "Identity & Access Control",
+          "Cryptography & Vulnerability Analysis",
+          "Incident Response & Risk Mitigation",
+          "Operational Procedures",
+        ],
+        platforms: [
+          "Microsoft Azure",
+          "Intune",
+          "Entra ID",
+          "Exchange Online",
+          "Microsoft 365 Admin Center",
+        ],
+        certs: [
+          { label: "CompTIA ITF+", done: true },
+          { label: "CompTIA A+", done: true },
+          { label: "CompTIA Network+", done: true },
+          { label: "CompTIA Security+", done: true },
+          { label: "CompTIA CySA+ (In Progress)", done: false },
+        ],
+        degrees: [
+          "Grossmont College — A.S. Computer Science & A.A. Political Science (2020)",
+          "CSU San Marcos — B.A. Political Science, Minor in MIS (2022)",
+          "Point Loma Nazarene University — B.A. Computer Information Technology (2023)",
+        ],
+      };
+
+      function App() {
+        return (
+          <div className="shell">
+            <header>
+              <img src="AC.jpg" alt="Antonio Castro" className="avatar" />
+              <div className="headline">
+                <div className="eyebrow">
+                  <span className="eyebrow-dot" />
+                  <span>IT Educator · Helpdesk Technician</span>
+                </div>
+                <h1>Antonio Castro</h1>
+                <div className="title-line">
+                  <span className="title-role">
+                    Building accessible, community-focused tech.
+                  </span>
+                  <span className="title-location">San Diego, CA</span>
+                </div>
+                <p className="summary">
+                  I help students, non-profits, and local government teams use
+                  technology confidently and securely—combining hands-on support,
+                  thoughtful documentation, and a teacher&apos;s mindset.
+                </p>
+                <div className="pill-row">
+                  <Pill>Service-minded IT</Pill>
+                  <Pill>Education &amp; Mentorship</Pill>
+                  <Pill>Cloud &amp; Security</Pill>
+                </div>
+              </div>
+            </header>
+
+            <main>
+              <div className="left-column">
+                <Section id="about" title="About Me" eyebrow="Overview">
+                  <p>
+                    Hi! I&apos;m Antonio, an IT Educator and IT Helpdesk
+                    Technician with a passion for making technology approachable
+                    and effective. Whether it&apos;s supporting municipal
+                    services, coaching students toward their first certification,
+                    or streamlining campus IT processes, I focus on clear
+                    communication, strong fundamentals, and reliable execution.
+                  </p>
+                </Section>
+
+                <Section
+                  id="experience"
+                  title="Where I Make an Impact"
+                  eyebrow="What I Do"
+                >
+                  <div className="split-columns">
+                    {experiences.map((exp) => (
+                      <ExperienceCard
+                        key={exp.title}
+                        title={exp.title}
+                        context={exp.context}
+                        bullets={exp.bullets}
+                      />
+                    ))}
+                  </div>
+                </Section>
+
+                <Section
+                  id="projects"
+                  title="Selected Work"
+                  eyebrow="My Projects"
+                >
+                  <div className="projects-grid">
+                    {projects.map((project) => (
+                      <article key={project.name} className="project">
+                        <div className="project-name-row">
+                          <h3>{project.name}</h3>
+                          <span className="project-tag">{project.tag}</span>
+                        </div>
+                        <p>{project.description}</p>
+                        <a href={project.url} target="_blank" rel="noreferrer">
+                          <span>View project</span>
+                          <span aria-hidden="true">↗</span>
+                        </a>
+                      </article>
+                    ))}
+                  </div>
+                </Section>
+              </div>
+
+              <div className="right-column">
+                <Section
+                  id="skills"
+                  title="Skills &amp; Domains"
+                  eyebrow="Technical Focus"
+                >
+                  <div className="skills-grid">
+                    <div>
+                      <p className="skills-group-title">Core Domains</p>
+                      <div className="chip-row">
+                        {skills.domains.map((skill) => (
+                          <span key={skill} className="chip chip-strong">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="skills-group-title">Cloud &amp; Platforms</p>
+                      <div className="chip-row">
+                        {skills.platforms.map((platform) => (
+                          <span key={platform} className="chip">
+                            {platform}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </Section>
+
+                <Section
+                  id="credentials"
+                  title="Certifications &amp; Education"
+                  eyebrow="Credentials"
+                >
+                  <div className="skills-grid">
+                    <div>
+                      <p className="skills-group-title">
+                        CompTIA Certifications
+                      </p>
+                      <ul className="certs-list">
+                        {skills.certs.map((cert) => (
+                          <li key={cert.label} className="cert-flag">
+                            <span>{cert.done ? "✅" : "⏳"}</span>
+                            {cert.label}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="skills-group-title">Degrees</p>
+                      <ul className="degree-list">
+                        {skills.degrees.map((deg) => (
+                          <li key={deg}>{deg}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </Section>
+
+                <Section
+                  id="journey"
+                  title="Career Snapshot"
+                  eyebrow="At a Glance"
+                >
+                  <div className="timeline">
+                    <div className="timeline-item">
+                      <span className="timeline-dot" />
+                      <p className="timeline-title">Local Government IT</p>
+                      <p className="timeline-caption">
+                        Cloud · Endpoint Management · Support
+                      </p>
+                      <p className="timeline-body">
+                        Supporting municipal departments with secure, reliable
+                        technology and clear documentation.
+                      </p>
+                    </div>
+                    <div className="timeline-item">
+                      <span className="timeline-dot" />
+                      <p className="timeline-title">Non-Profit &amp; Education</p>
+                      <p className="timeline-caption">
+                        Instruction · Curriculum · Coaching
+                      </p>
+                      <p className="timeline-body">
+                        Guiding students through certification paths with
+                        approachable curriculum and hands-on labs.
+                      </p>
+                    </div>
+                    <div className="timeline-item">
+                      <span className="timeline-dot" />
+                      <p className="timeline-title">Higher Education IT</p>
+                      <p className="timeline-caption">
+                        SOPs · Imaging · Student Mentorship
+                      </p>
+                      <p className="timeline-body">
+                        Improving imaging workflows and mentoring student staff
+                        on operational IT work.
+                      </p>
+                    </div>
+                  </div>
+                </Section>
+              </div>
+            </main>
+
+            <p className="footer-note">
+              View the source code on{" "}
+              <a
+                href="https://github.com/Sudo-Antonio-Castro/Portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+              .
+            </p>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
