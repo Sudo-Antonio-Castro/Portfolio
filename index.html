@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Antonio Castro — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Antonio Castro — IT Educator and IT Helpdesk Technician specializing in community-focused technology, cloud, and cybersecurity."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #faf9f7;
+        --surface: #ffffff;
+        --text: #1a1814;
+        --muted: #7a756c;
+        --border: #e8e4de;
+        --accent: #1a1814;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-serif: "Playfair Display", Georgia, serif;
+        --max: 1080px;
+      }
+
+      [data-theme="dark"] {
+        --bg: #0f0e0c;
+        --surface: #171612;
+        --text: #f0ece4;
+        --muted: #8a8578;
+        --border: #2a2820;
+        --accent: #f0ece4;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        border-bottom: 1px solid var(--border);
+        background: color-mix(in oklab, var(--bg) 92%, transparent);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.85;
+      }
+
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      .theme-toggle svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+      }
+
+      .hero {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 80px 32px 64px;
+        border-bottom: 1px solid var(--border);
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+      }
+
+      .hero-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--border);
+        background: var(--surface);
+      }
+
+      .hero-kicker {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero-kicker::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 1px;
+        background: var(--muted);
+      }
+
+      .hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(38px, 6vw, 64px);
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        max-width: 760px;
+        margin-bottom: 14px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+        color: var(--text);
+        margin-bottom: 12px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 650px;
+        line-height: 1.7;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .pill {
+        border: 1px solid var(--border);
+        padding: 7px 11px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        background: var(--surface);
+      }
+
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 48px 32px 72px;
+      }
+
+      .section {
+        margin-bottom: 56px;
+      }
+
+      .section-label {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .section-label span {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .section-rule {
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        display: block;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 24px;
+      }
+
+      .card-kicker {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+
+      .card-title {
+        font-family: var(--font-serif);
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+      }
+
+      .card-desc,
+      .card ul,
+      .card p,
+      .card li {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .card ul {
+        padding-left: 18px;
+      }
+
+      .card li + li {
+        margin-top: 6px;
+      }
+
+      .card-meta {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-top: 18px;
+      }
+
+      .list-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .list-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 24px;
+      }
+
+      .list-card h2 {
+        font-family: var(--font-serif);
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 14px;
+      }
+
+      .list-card h3 {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        border: 1px solid var(--border);
+        padding: 7px 11px;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .timeline-item {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 24px;
+      }
+
+      .timeline-title {
+        font-family: var(--font-serif);
+        font-size: 24px;
+        line-height: 1.1;
+        margin-bottom: 8px;
+      }
+
+      .timeline-caption {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+
+      .timeline-body {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      footer {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 24px 32px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .card-grid,
+        .list-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .topbar {
+          padding: 0 20px;
+        }
+
+        .hero {
+          padding: 48px 20px 40px;
+        }
+
+        .wrap {
+          padding: 36px 20px 56px;
+        }
+
+        footer {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="topbar">
+        <div class="brand">Antonio Castro · Portfolio</div>
+
+        <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 18a6 6 0 110-12 6 6 0 010 12zm0-2a4 4 0 100-8 4 4 0 000 8zm0-10V2m0 20v-4M4.22 4.22l2.83 2.83m9.9 9.9 2.83 2.83M2 12h4m16 0h-4M4.22 19.78l2.83-2.83m9.9-9.9 2.83-2.83"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <img class="hero-photo" src="AC.jpg" alt="Antonio Castro" />
+
+        <div>
+          <div class="hero-kicker">Overview</div>
+          <h1>Building accessible, community-focused tech.</h1>
+          <div class="hero-subtitle">
+            Antonio Castro · IT Educator · IT Helpdesk Technician · San Diego, CA
+          </div>
+          <p>
+            I help students, non-profits, and local government teams use technology
+            confidently and securely—combining hands-on support, thoughtful
+            documentation, and a teacher's mindset.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Service-minded IT</span>
+            <span class="pill">Education &amp; Mentorship</span>
+            <span class="pill">Cloud &amp; Security</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="section">
+          <div class="section-label">
+            <span>About Me</span>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-kicker">Overview</div>
+            <div class="card-title">Approachable, effective technology.</div>
+            <div class="card-desc">
+              Hi! I'm Antonio, an IT Educator and IT Helpdesk Technician with a
+              passion for making technology approachable and effective. Whether
+              it's supporting municipal services, coaching students toward their
+              first certification, or streamlining campus IT processes, I focus
+              on clear communication, strong fundamentals, and reliable
+              execution.
+            </div>
+            <div class="card-meta">Community · support · instruction</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <span>Where I Make an Impact</span>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-kicker">Local Government</div>
+              <div class="card-title">IT Helpdesk &amp; Cloud Support</div>
+              <ul>
+                <li>Support city-wide IT operations and cloud infrastructure for municipal departments.</li>
+                <li>Deploy and manage Azure, Intune, Entra ID, Exchange Online, and Microsoft 365 Admin Center.</li>
+                <li>Help ensure reliable, secure digital services for residents and staff.</li>
+              </ul>
+              <div class="card-meta">Operations · cloud · support</div>
+            </div>
+
+            <div class="card">
+              <div class="card-kicker">Non-Profit</div>
+              <div class="card-title">IT Educator &amp; Coach</div>
+              <ul>
+                <li>Design tailored study plans and certification roadmaps for ADA students.</li>
+                <li>Restructure CompTIA A+ curriculum into focused 1101/1102 modules.</li>
+                <li>Mentor learners to build confidence with hands-on labs and real-world scenarios.</li>
+              </ul>
+              <div class="card-meta">Curriculum · coaching · mentorship</div>
+            </div>
+
+            <div class="card">
+              <div class="card-kicker">Higher Education</div>
+              <div class="card-title">Campus IT &amp; Student Mentor</div>
+              <ul>
+                <li>Author SOPs for imaging campus devices, improving turnaround by over an hour per session.</li>
+                <li>Mentor student workers on system administration and endpoint security tools.</li>
+                <li>Help bridge academic theory with operational IT practices.</li>
+              </ul>
+              <div class="card-meta">SOPs · imaging · operations</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <span>Selected Work</span>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="card-grid">
+            <a class="card" href="https://sudo-antonio-castro.github.io/CyberSecurity/" target="_blank" rel="noreferrer">
+              <div class="card-kicker">Security · Hands-on</div>
+              <div class="card-title">CyberSecurity Labs</div>
+              <div class="card-desc">
+                A collection of security-focused labs and configurations exploring threats, defenses, and incident response.
+              </div>
+              <div class="card-meta">View project ↗</div>
+            </a>
+
+            <a class="card" href="https://github.com/Sudo-Antonio-Castro/R/tree/main" target="_blank" rel="noreferrer">
+              <div class="card-kicker">Programming · Data</div>
+              <div class="card-title">R Programming</div>
+              <div class="card-desc">
+                Coursework and hands-on programming work built in R for analysis, learning, and practical problem solving.
+              </div>
+              <div class="card-meta">View project ↗</div>
+            </a>
+
+            <a class="card" href="https://sudo-antonio-castro.github.io/CompTIA-1201-Home-Labs/" target="_blank" rel="noreferrer">
+              <div class="card-kicker">CompTIA · Home Labs</div>
+              <div class="card-title">A+ 1201 Home Labs</div>
+              <div class="card-desc">
+                A hands-on home lab collection supporting foundational CompTIA A+ study and practice.
+              </div>
+              <div class="card-meta">View project ↗</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <span>Skills &amp; Credentials</span>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="list-grid">
+            <div class="list-card">
+              <h3>Technical Focus</h3>
+              <h2>Skills &amp; Domains</h2>
+              <div class="chip-row">
+                <span class="chip">Hardware &amp; Software Troubleshooting</span>
+                <span class="chip">Network Architecture &amp; Security</span>
+                <span class="chip">Endpoint Management</span>
+                <span class="chip">Identity &amp; Access Control</span>
+                <span class="chip">Cryptography &amp; Vulnerability Analysis</span>
+                <span class="chip">Incident Response &amp; Risk Mitigation</span>
+                <span class="chip">Operational Procedures</span>
+                <span class="chip">Microsoft Azure</span>
+                <span class="chip">Intune</span>
+                <span class="chip">Entra ID</span>
+                <span class="chip">Exchange Online</span>
+                <span class="chip">Microsoft 365 Admin Center</span>
+              </div>
+            </div>
+
+            <div class="list-card">
+              <h3>Credentials</h3>
+              <h2>Certifications &amp; Education</h2>
+              <ul>
+                <li>✅ CompTIA ITF+</li>
+                <li>✅ CompTIA A+</li>
+                <li>✅ CompTIA Network+</li>
+                <li>✅ CompTIA Security+</li>
+                <li>⏳ CompTIA CySA+ (In Progress)</li>
+                <li>Grossmont College — A.S. Computer Science &amp; A.A. Political Science (2020)</li>
+                <li>CSU San Marcos — B.A. Political Science, Minor in MIS (2022)</li>
+                <li>Point Loma Nazarene University — B.A. Computer Information Technology (2023)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <span>Career Snapshot</span>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-caption">Cloud · Endpoint Management · Support</div>
+              <div class="timeline-title">Local Government IT</div>
+              <div class="timeline-body">
+                Supporting municipal departments with secure, reliable technology and clear documentation.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-caption">Instruction · Curriculum · Coaching</div>
+              <div class="timeline-title">Non-Profit &amp; Education</div>
+              <div class="timeline-body">
+                Guiding students through certification paths with approachable curriculum and hands-on labs.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-caption">SOPs · Imaging · Student Mentorship</div>
+              <div class="timeline-title">Higher Education IT</div>
+              <div class="timeline-body">
+                Improving imaging workflows and mentoring student staff on operational IT work.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>Antonio Castro · Portfolio</div>
+      <div>
+        <a href="https://github.com/Sudo-Antonio-Castro/Portfolio" target="_blank" rel="noreferrer">View source on GitHub</a>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const themeBtn = document.getElementById("themeBtn");
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "light") {
+        root.setAttribute("data-theme", "light");
+      }
+
+      themeBtn.addEventListener("click", () => {
+        const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      });
+    </script>
+  </body>
+</html>
